@@ -1,0 +1,16 @@
+.profile__name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30px;
+  position: relative;
+  max-width: 336px;
+}
+
+@media screen and (max-width: 767px) {
+  .profile__name {
+    font-size: 27px;
+    margin: 26px 0 0;
+    max-width: 215px;
+  }
+}

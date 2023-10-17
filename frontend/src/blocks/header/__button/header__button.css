@@ -1,0 +1,23 @@
+.header__button {
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.22;
+  color: #ffffff;
+  margin: 0;
+  background-color: black;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header__button:first-child {
+  margin-right: 24px;
+}
+
+@media screen and (max-width: 767px) {
+  .header__button:last-child {
+    margin-right: 27px;
+  }
+}

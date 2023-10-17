@@ -1,0 +1,12 @@
+.welcomeform__question {
+  width: 100%;
+  height: 17px;
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}

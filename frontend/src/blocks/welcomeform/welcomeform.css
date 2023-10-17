@@ -1,0 +1,7 @@
+.welcomeform {
+  width: 358px;
+  display: flex;
+  margin: 60px auto 15px;
+  flex-direction: column;
+  align-items: center;
+}

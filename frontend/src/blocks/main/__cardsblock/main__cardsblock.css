@@ -1,0 +1,10 @@
+.main__cardsblock {
+  margin: 51px auto 0;
+}
+
+@media screen and (max-width: 767px) {
+  .main__cardsblock {
+    margin-top: 36px;
+  }
+
+}

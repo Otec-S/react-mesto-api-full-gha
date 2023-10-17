@@ -1,0 +1,11 @@
+.profile__avatar-change {
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.profile__avatar-change:hover {
+  z-index: 1;
+}

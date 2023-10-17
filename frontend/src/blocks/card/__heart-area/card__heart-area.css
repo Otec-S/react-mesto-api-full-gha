@@ -1,0 +1,6 @@
+.card__heart-area {
+  grid-area: heart;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}

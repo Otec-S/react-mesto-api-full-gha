@@ -1,0 +1,18 @@
+.card__trash-can {
+  background-image: url(../../../images/trash-can-svg.svg);
+  grid-column: 2/3;
+  grid-row: 1/2;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  margin-bottom: 225px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.6s;
+}
+
+.card__trash-can:hover {
+  opacity: 0.6;
+}
+

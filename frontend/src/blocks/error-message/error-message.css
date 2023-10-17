@@ -1,0 +1,13 @@
+.error-message {
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #FF0000;
+  min-height: 48px;
+}
+
+.error-message:nth-child(2) {
+  min-height: 30px;
+}
