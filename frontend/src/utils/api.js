@@ -2,13 +2,13 @@ class Api {
   constructor(config) {
     this._url = config.url;
     this._headers = config.headers;
-    this._token = localStorage.getItem("token"); //????
+    // this._token = localStorage.getItem("token"); //????
   }
 
   //вспомогательный метод
   _handleResponse(res) {
     if (res.ok) {
-      console.log('res:', res);
+      console.log("res:", res);
       return res.json();
     } else {
       return Promise.reject(`Ошибка: ${res.status}`);
@@ -21,9 +21,7 @@ class Api {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        Authorization: `Bearer ${this._token}`,
-        // authorization:
-        //   "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTIwZTgxZmNmMTBjMDI3OGNhNzY1MzYiLCJpYXQiOjE2OTY2NTY0ODEsImV4cCI6MTY5NzI2MTI4MX0.BsS76MQHpojcn650KIx-KQ3V5tKCcTvn2R0TI8v46uk",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     }).then(this._handleResponse);
   }
@@ -35,7 +33,7 @@ class Api {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        Authorization: `Bearer ${this._token}`,
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
       body: JSON.stringify({
         name: newCardName,
@@ -50,7 +48,7 @@ class Api {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        Authorization: `Bearer ${this._token}`,
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     }).then(this._handleResponse);
   }
@@ -62,7 +60,7 @@ class Api {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        Authorization: `Bearer ${this._token}`,
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
       body: JSON.stringify({
         name: newUserName,
@@ -77,7 +75,7 @@ class Api {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        Authorization: `Bearer ${this._token}`,
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     }).then(this._handleResponse);
   }
@@ -88,7 +86,7 @@ class Api {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        Authorization: `Bearer ${this._token}`,
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     }).then(this._handleResponse);
   }
@@ -99,7 +97,7 @@ class Api {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        Authorization: `Bearer ${this._token}`,
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     }).then(this._handleResponse);
   }
@@ -111,7 +109,7 @@ class Api {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        Authorization: `Bearer ${this._token}`,
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
       body: JSON.stringify({
         avatar: newAvatarLink,
