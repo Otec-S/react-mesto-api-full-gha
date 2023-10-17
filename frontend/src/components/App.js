@@ -313,6 +313,8 @@ function App() {
                         buttonSignOut="Выйти"
                         handleUnLogin={handleUnLogin}
                         setCurrentUser={setCurrentUser}
+                        setUsersEmail={setUsersEmail}
+                        setCards={setCards}
                         usersEmail={usersEmail}
                       />
                       <Main

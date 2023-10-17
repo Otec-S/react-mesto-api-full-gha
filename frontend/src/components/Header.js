@@ -2,12 +2,15 @@ import logoWhite from "../images/header-logo-white.svg";
 import { Link, useNavigate } from "react-router-dom";
 import React from "react";
 
-function Header({ buttonName, usersEmail, buttonSignOut, handleUnLogin, setCurrentUser }) {
+function Header({ buttonName, usersEmail, buttonSignOut, handleUnLogin, setCurrentUser, setUsersEmail, setCards }) {
   const navigate = useNavigate();
   function onSignOut() {
     localStorage.removeItem("token");
     handleUnLogin(); // устанавливаем стейт isLoggedIn в положение false
     setCurrentUser({});
+    setCards([]);
+    setUsersEmail(null);
+
     navigate("/sign-in", { replace: true });
   }
 
