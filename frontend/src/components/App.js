@@ -21,7 +21,7 @@ import ProtectedRouteElement from "./ProtectedRoute.js";
 import InfoTooltip from "./InfoTooltip.js";
 
 function App() {
-  //ПЕРЕМЕННЫЕ
+  // ПЕРЕМЕННЫЕ
 
   const navigate = useNavigate();
 
