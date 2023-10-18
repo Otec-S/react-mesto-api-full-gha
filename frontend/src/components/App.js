@@ -33,7 +33,7 @@ function App() {
   //стейт эл почты зарегистрированного лица
   const [usersEmail, setUsersEmail] = React.useState(null);
 
-  //устанавливаем переменную состояние <cards> (список карточек)
+  //устанавливаем переменную состояние <cards> (массив карточек)
   const [cards, setCards] = React.useState([]);
 
   //переменная состояния для данных о залогинивании пользователя
@@ -96,11 +96,8 @@ function App() {
 
   //ФУНКЦИИ
 
-  // !!!!!!!!!!!!!! НЕ срабатвает при первом логировании пользователя !!!!!!!!!!!!!!!
   //эффект при монтировании для currentUser и для получения карточек с сервера
   React.useEffect(() => {
-    // console.log("сработал первый isLoggedIn");
-
     //только если пользователь залогирован
     if (isLoggedIn) {
       //получаем данные о пользователе с сервера
@@ -184,7 +181,6 @@ function App() {
   //функция удаления карточки
   function handleCardDelete(card) {
     // Определяем, являемся ли мы владельцем текущей карточки
-
     const isOwn = card.owner === currentUser._id;
 
     //После запроса в API, обновите стейт cards с помощью метода filter: создайте копию массива, исключив из него удалённую карточку.
@@ -193,10 +189,10 @@ function App() {
         .deleteCard(card._id)
         .then(() => {
           setCards((cardsList) => {
-            console.log("cardsList:", cardsList);
-            cardsList.filter(function (item) {
+            const newCardList = cardsList.filter(function (item) {
               return item._id !== card._id;
             });
+            return newCardList;
           });
         })
         .catch(console.error);

@@ -1,4 +1,3 @@
-// export const BASE_URL = "https://auth.nomoreparties.co";
 export const BASE_URL = "http://localhost:3000";
 
 export function register(email, password) {
@@ -26,7 +25,7 @@ export function authorize(email, password) {
     .then((data) => {
       if (data.token) {
         localStorage.setItem("token", data.token);
-        console.log('data from function authorize:', data);
+        // console.log('data from function authorize:', data);
         return data; //возвращается только токен
       }
     })

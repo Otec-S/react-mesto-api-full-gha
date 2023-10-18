@@ -1,14 +1,12 @@
 class Api {
   constructor(config) {
     this._url = config.url;
-    this._headers = config.headers;
-    // this._token = localStorage.getItem("token"); //????
   }
 
   //вспомогательный метод
   _handleResponse(res) {
     if (res.ok) {
-      console.log("res:", res);
+      // console.log("res:", res);
       return res.json();
     } else {
       return Promise.reject(`Ошибка: ${res.status}`);
@@ -17,7 +15,6 @@ class Api {
 
   getCards() {
     return fetch(`${this._url}/cards`, {
-      // headers: this._headers
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -44,7 +41,6 @@ class Api {
 
   getUserInfo() {
     return fetch(`${this._url}/users/me`, {
-      // headers: this._headers
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -118,15 +114,12 @@ class Api {
   }
 }
 
-const token = localStorage.getItem("token");
-
 //экземпляр класса Api с моими параметрами и токеном
 const api = new Api({
-  // url: "https://mesto.nomoreparties.co/v1/cohort-70",
   url: "http://localhost:3000",
   headers: {
     Accept: "application/json",
-    Authorization: `Bearer ${token}`,
+    Authorization: `Bearer ${localStorage.getItem("token")}`,
     "Content-Type": "application/json",
   },
 });

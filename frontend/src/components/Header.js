@@ -7,9 +7,9 @@ function Header({ buttonName, usersEmail, buttonSignOut, handleUnLogin, setCurre
   function onSignOut() {
     localStorage.removeItem("token");
     handleUnLogin(); // устанавливаем стейт isLoggedIn в положение false
-    setCurrentUser({});
+    setCurrentUser({}); // если будешь это убирать, убирай и пропсы
     setCards([]);
-    setUsersEmail(null);
+    // setUsersEmail(null);
 
     navigate("/sign-in", { replace: true });
   }
