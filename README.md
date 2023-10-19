@@ -9,8 +9,8 @@
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 158.160.14.224
 
-Frontend https://...
+Frontend https://otec-s.students.nomoredomainsrocks.ru
 
-Backend https://...
+Backend https://api.otec-s.students.nomoredomainsrocks.ru
