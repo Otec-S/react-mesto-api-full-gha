@@ -25,7 +25,8 @@ app.use(express.urlencoded({ extended: true }));
 
 // подключаемся к серверу mongo
 mongoose
-  .connect("mongodb://127.0.0.1:27017/mestodb", {
+  // .connect("mongodb://127.0.0.1:27017/mestodb", {
+  .connect("mongodb://localhost:27017/mestodb", { // ??????????????
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
