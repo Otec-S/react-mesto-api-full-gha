@@ -13,6 +13,7 @@ export function register(email, password) {
 export function authorize(email, password) {
   return fetch(`${BASE_URL}/signin`, {
     method: "POST",
+    mode: "no-cors", // ????????????????????
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
