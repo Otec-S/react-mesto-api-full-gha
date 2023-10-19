@@ -1,4 +1,5 @@
 export const BASE_URL = "https://api.otec-s.students.nomoredomainsrocks.ru";
+// export const BASE_URL = "http://localhost:3000";
 
 export function register(email, password) {
   return fetch(`${BASE_URL}/signup`, {
@@ -13,7 +14,7 @@ export function register(email, password) {
 export function authorize(email, password) {
   return fetch(`${BASE_URL}/signin`, {
     method: "POST",
-    mode: "no-cors", // ????????????????????
+    // mode: "no-cors", // ????????????????????
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
