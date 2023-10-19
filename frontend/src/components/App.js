@@ -150,13 +150,22 @@ function App() {
   function handleCardLike(card) {
     // Проверяем, есть ли уже мой лайк на этой карточке
     // тут либо true либо false
-    const isLiked = card.likes.some((i) => i._id === currentUser._id);
+    const isLiked = card.likes.some((i) => i === currentUser._id);
+
+    // console.log("currentUser:", currentUser);
+    // console.log("card:", card);
+    // console.log("card.likes:", card.likes); // тут просто id того, кто лайкнул
+
+    // console.log("isLiked:", isLiked);
+
 
     //вспомогательная функция для исключения дублирования кода ниже
     function changeLikes(item) {
-      setCards((stateLike) =>
-        stateLike.map((c) => (c._id === card._id ? item : c))
-      );
+      setCards((stateLike) => {
+        // console.log('stateLike до:', stateLike);
+        return stateLike.map((c) => (c._id === card._id ? item : c));
+        // console.log('stateLike после:', stateLike);
+      });
     }
 
     // если еще нет лайка: putLike, если уже есть: deleteLike

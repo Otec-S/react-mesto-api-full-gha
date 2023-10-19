@@ -55,7 +55,7 @@ function Main(props) {
       <section className="cardsblock main__cardsblock">
         <ul className="cards">
           {props.cards?.map((item) => {
-            console.log('props.cards:', props.cards);
+            {/* console.log('props.cards:', props.cards); */}
             return (
               <Card
                 card={item}
