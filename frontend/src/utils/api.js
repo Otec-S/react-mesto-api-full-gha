@@ -6,7 +6,6 @@ class Api {
   //вспомогательный метод
   _handleResponse(res) {
     if (res.ok) {
-      // console.log("res:", res);
       return res.json();
     } else {
       return Promise.reject(`Ошибка: ${res.status}`);

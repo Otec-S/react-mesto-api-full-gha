@@ -152,13 +152,6 @@ function App() {
     // тут либо true либо false
     const isLiked = card.likes.some((i) => i === currentUser._id);
 
-    // console.log("currentUser:", currentUser);
-    // console.log("card:", card);
-    // console.log("card.likes:", card.likes); // тут просто id того, кто лайкнул
-
-    // console.log("isLiked:", isLiked);
-
-
     //вспомогательная функция для исключения дублирования кода ниже
     function changeLikes(item) {
       setCards((stateLike) => {
@@ -318,7 +311,6 @@ function App() {
                         buttonSignOut="Выйти"
                         handleUnLogin={handleUnLogin}
                         setCurrentUser={setCurrentUser}
-                        setUsersEmail={setUsersEmail}
                         setCards={setCards}
                         usersEmail={usersEmail}
                       />

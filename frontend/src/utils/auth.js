@@ -25,7 +25,6 @@ export function authorize(email, password) {
     .then((data) => {
       if (data.token) {
         localStorage.setItem("token", data.token);
-        // console.log('data from function authorize:', data);
         return data; //возвращается только токен
       }
     })
@@ -42,6 +41,6 @@ export const getContent = (token) => {
     },
   })
     .then((res) => res.json())
-    .then((data) => data) // тут data поступает нормальная
+    .then((data) => data)
     .catch(console.error);
 };
