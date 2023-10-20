@@ -9,6 +9,13 @@ const Unauthorized401Error = require("../errors/unauthorized-401-error");
 const NotFound404Error = require("../errors/not-found-404-error");
 const Conflict409Error = require("../errors/conflict-409-error");
 
+const { NODE_ENV, JWT_SECRET } = process.env;
+
+// const token = jwt.sign(
+//   { _id: user._id },
+//   NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret'
+// );
+
 // запрашиваем модель user и присваеваем её константе User
 const User = require("../models/user");
 
@@ -100,9 +107,13 @@ const login = (req, res, next) => {
           })
           .then((authUser) => {
             // создадим токен
-            const token = jwt.sign({ _id: authUser._id }, "some-secret-key", {
-              expiresIn: "7d",
-            });
+            const token = jwt.sign(
+              { _id: authUser._id },
+              NODE_ENV === "production" ? JWT_SECRET : "dev-secret",
+              {
+                expiresIn: "7d",
+              }
+            );
             // вернём токен
             res.send({ token });
           })
