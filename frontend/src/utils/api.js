@@ -115,7 +115,6 @@ class Api {
 
 //экземпляр класса Api с моими параметрами и токеном
 const api = new Api({
-  // url: "http://localhost:3000",
   url: "https://api.otec-s.students.nomoredomainsrocks.ru",
 
   headers: {

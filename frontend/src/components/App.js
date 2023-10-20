@@ -155,9 +155,7 @@ function App() {
     //вспомогательная функция для исключения дублирования кода ниже
     function changeLikes(item) {
       setCards((stateLike) => {
-        // console.log('stateLike до:', stateLike);
         return stateLike.map((c) => (c._id === card._id ? item : c));
-        // console.log('stateLike после:', stateLike);
       });
     }
 
@@ -166,7 +164,6 @@ function App() {
       api
         .putLike(card._id)
         .then((newCard) => {
-          // console.log("newCard:", newCard);
           changeLikes(newCard);
         })
         .catch(console.error);

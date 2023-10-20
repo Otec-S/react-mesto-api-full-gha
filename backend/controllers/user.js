@@ -11,11 +11,6 @@ const Conflict409Error = require("../errors/conflict-409-error");
 
 const { NODE_ENV, JWT_SECRET } = process.env;
 
-// const token = jwt.sign(
-//   { _id: user._id },
-//   NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret'
-// );
-
 // запрашиваем модель user и присваеваем её константе User
 const User = require("../models/user");
 
