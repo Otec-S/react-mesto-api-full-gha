@@ -7,7 +7,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.14.224
+IP 158.160.14.224
 
 Frontend https://otec-s.students.nomoredomainsrocks.ru
 
