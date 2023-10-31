@@ -39,11 +39,11 @@ mongoose
 app.use(requestLogger);
 
 // <<<<<краш-тест сервера>>>>>
-app.get("/crash-test", () => {
-  setTimeout(() => {
-    throw new Error("Сервер сейчас упадёт");
-  }, 0);
-});
+// app.get("/crash-test", () => {
+//   setTimeout(() => {
+//     throw new Error("Сервер сейчас упадёт");
+//   }, 0);
+// });
 
 // роуты, не требующие авторизации, например, регистрация и логин
 app.post(
