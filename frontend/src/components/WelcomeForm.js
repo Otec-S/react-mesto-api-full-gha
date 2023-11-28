@@ -17,7 +17,6 @@ export default function WelcomeForm({
         value={formValue.email}
         className="welcomeform__input"
         required
-        // autoComplete="off"
         placeholder="Email"
         onChange={handleChange}
       />

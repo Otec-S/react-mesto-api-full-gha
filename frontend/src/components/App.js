@@ -39,8 +39,6 @@ function App() {
   //переменная состояния для данных о залогинивании пользователя
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
 
-  // console.log('isLoggedIn in app.js:', isLoggedIn);
-
   //переменная для отслеживания состояния загрузки
   const [isLoading, setIsLoading] = React.useState(false);
 
@@ -53,6 +51,7 @@ function App() {
 
   //стейт отктрытия попапа InfoTooltip
   const [isInfoTooltipOpen, setIsInfoTooltipOpen] = React.useState(false);
+  
   const [isRegistered, setIsRegistered] = React.useState(false);
 
   //стейт для Big Card
